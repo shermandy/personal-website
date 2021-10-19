@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #334142;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  padding: 1rem;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+header button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  margin-left: 0.5rem;
+}
+
+header button svg {
+  max-height: 35px;
+  fill: rgba(255,255,255, 0.5);
+}
+
+header button:hover svg {
+  fill: rgba(255,255,255, 1);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding; 1rem;
+}
+#drawMessage {
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+main {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 75px);
+}
+
+main ul {
+  list-style: none;
+  pointer-events: none;
+  padding: 0;
+  line-height: 4;
+}
+
+main ul a {
+  pointer-events: auto;
+}
+
+main canvas {
+  position: absolute;
+  z-index:-1;
+}
+
+main svg {
+  fill: rgba(255,255,255, 0.7);
+  -webkit-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  -moz-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  -ms-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  -o-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+main ul a:hover svg {
+  fill: rgba(255,255,255,1);
+  transform: scale(1.2);
+  -webkit-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  -moz-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  -ms-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  -o-transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: fill 250ms ease-in-out, transform 250ms ease-in-out;
+}
