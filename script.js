@@ -1,9 +1,18 @@
+let logo;
+function preload() {
+  logo = loadImage('https://i.imgur.com/5RvHUL6.png');
+  
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("#334142");
   colorMode(HSB);
   stroke("white");
   strokeWeight(5);
+  logo.resize(75, 0);
+  image(logo, 15, 45);
+  
   let btnExport = document.getElementById("save");
   btnExport.addEventListener("click", exportPressed, false);
 
@@ -17,15 +26,16 @@ function windowResized() {
 }
 
 function mouseDragged() {
+  //Line from prev pt to current pt of mouse position
   let lineDraw = line(mouseX, mouseY, pmouseX, pmouseY);
   document.getElementById("drawMessage").classList.add("hide")
-  document.getElementById("head").classList.remove("hide")
+  document.getElementById("btns").classList.remove("hide")
 }
 
 document.getElementById("clear").addEventListener("click", function () {
-  background("#334142");
+  setup()
   document.getElementById("drawMessage").classList.remove("hide")
-  document.getElementById("head").classList.add("hide")
+  document.getElementById("btns").classList.add("hide")
 });
 
 if(('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
