@@ -6,7 +6,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  background("#334142")
+  background("#316af1")
   colorMode(HSB)
   stroke("white")
   strokeWeight(5)
